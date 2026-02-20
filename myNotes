@@ -1,0 +1,443 @@
+# ==========================================================
+# PYTHON 
+# LECTURE 1 + LECTURE 2 COMBINED NOTES
+# ==========================================================
+
+
+# ==========================================================
+# LECTURE 1 : INTRODUCTION TO PYTHON
+# ==========================================================
+
+# Python is a high-level, interpreted programming language.
+# Easy syntax and beginner friendly.
+# Used in AI, Web Development, Automation, Data Science etc.
+
+
+# ----------------------------------------------------------
+# 1. FIRST PYTHON PROGRAM
+# ----------------------------------------------------------
+
+print("Hello World")
+
+
+# ----------------------------------------------------------
+# 2. VARIABLES
+# ----------------------------------------------------------
+# Variables store data values.
+
+name = "Sandy"
+age = 20
+price = 99.5
+
+print(name)
+print(age)
+print(price)
+
+
+# Rules:
+# variable cannot start with number
+# no spaces allowed
+# case sensitive
+
+
+# ----------------------------------------------------------
+# 3. DATA TYPES
+# ----------------------------------------------------------
+
+a = 10          # int
+b = 10.5        # float
+c = "Python"    # string
+d = True        # boolean
+e = None        # none type
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+
+
+# ----------------------------------------------------------
+# 4. KEYWORDS
+# ----------------------------------------------------------
+# Reserved words in Python.
+# Example: if, else, True, False, None, while, for
+
+
+# ----------------------------------------------------------
+# 5. PRINT STATEMENT
+# ----------------------------------------------------------
+
+print("My name is", name)
+print("My age is", age)
+
+
+# ----------------------------------------------------------
+# 6. INPUT FROM USER
+# ----------------------------------------------------------
+
+user_name = input("Enter your name: ")
+print("Welcome", user_name)
+
+
+# Input number (important)
+num = int(input("Enter a number: "))
+print("You entered:", num)
+
+
+# ==========================================================
+# LECTURE 2 : OPERATORS & CONDITIONAL STATEMENTS
+# ==========================================================
+
+
+# ----------------------------------------------------------
+# 7. ARITHMETIC OPERATORS
+# ----------------------------------------------------------
+
+a = 10
+b = 3
+
+print(a + b)   # addition
+print(a - b)   # subtraction
+print(a * b)   # multiplication
+print(a / b)   # division
+print(a % b)   # remainder
+print(a ** b)  # power
+
+
+# ----------------------------------------------------------
+# 8. RELATIONAL (COMPARISON) OPERATORS
+# ----------------------------------------------------------
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+
+
+# ----------------------------------------------------------
+# 9. ASSIGNMENT OPERATORS
+# ----------------------------------------------------------
+
+x = 5
+x += 2
+print(x)
+
+x -= 1
+print(x)
+
+
+# ----------------------------------------------------------
+# 10. LOGICAL OPERATORS
+# ----------------------------------------------------------
+
+print(True and False)
+print(True or False)
+print(not True)
+
+
+# ----------------------------------------------------------
+# 11. TYPE CONVERSION
+# ----------------------------------------------------------
+
+a = 2
+b = 4.25
+
+sum1 = a + b
+print(sum1)   # automatic conversion
+
+
+# Type casting
+a = int("5")
+print(a)
+
+
+# ----------------------------------------------------------
+# 12. CONDITIONAL STATEMENTS
+# ----------------------------------------------------------
+
+age = 18
+
+if age >= 18:
+    print("You can vote")
+
+
+# ----------------------------------------------------------
+# IF - ELSE
+# ----------------------------------------------------------
+
+num = 7
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+# ----------------------------------------------------------
+# IF - ELIF - ELSE
+# ----------------------------------------------------------
+
+marks = 85
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+else:
+    print("Grade C")
+
+
+# ----------------------------------------------------------
+# NESTED IF
+# ----------------------------------------------------------
+
+num = 10
+
+if num > 0:
+    if num % 2 == 0:
+        print("Positive Even Number")
+
+
+# ----------------------------------------------------------
+# PRACTICE QUESTION 1
+# Check whether number is positive or negative
+# ----------------------------------------------------------
+
+num = int(input("Enter number: "))
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+# ----------------------------------------------------------
+# PRACTICE QUESTION 2
+# Greatest of three numbers
+# ----------------------------------------------------------
+
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+c = int(input("Enter c: "))
+
+if a >= b and a >= c:
+    print("A is greatest")
+elif b >= c:
+    print("B is greatest")
+else:
+    print("C is greatest")
+
+
+
+
+
+Method	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+
+
+
+
+# ==========================================================
+# PYTHON LECTURE 3 NOTES 
+# TOPIC: LISTS AND TUPLES
+# ==========================================================
+
+
+# ==========================================================
+# 1. LIST DEFINITION
+# ==========================================================
+# List is a collection of different data types.
+# Lists are ORDERED and MUTABLE (can be changed).
+
+marks = [94, 87, 76, 65]
+print("List:", marks)
+
+
+# ==========================================================
+# 2. LIST WITH DIFFERENT DATA TYPES
+# ==========================================================
+
+student = ["Sandy", 20, 95.5, True]
+print("Student list:", student)
+
+
+# ==========================================================
+# 3. LIST INDEXING
+# ==========================================================
+# Index starts from 0
+
+print("First element:", marks[0])
+print("Second element:", marks[1])
+
+
+# Negative indexing (from end)
+print("Last element:", marks[-1])
+
+
+# ==========================================================
+# 4. LIST IS MUTABLE (CAN CHANGE VALUES)
+# ==========================================================
+
+marks[1] = 90
+print("Updated list:", marks)
+
+
+# ==========================================================
+# 5. LIST SLICING
+# ==========================================================
+# Syntax: list[start:end]
+
+nums = [1, 2, 3, 4, 5]
+
+print(nums[1:4])   # elements from index 1 to 3
+print(nums[:3])    # start to index 3
+print(nums[2:])    # index 2 to end
+
+
+# ==========================================================
+# 6. LIST METHODS
+# ==========================================================
+
+list1 = [1, 2, 3]
+
+# append() -> adds element at end
+list1.append(4)
+print("append:", list1)
+
+# sort() -> sorts list
+nums = [5, 2, 8, 1]
+nums.sort()
+print("sorted:", nums)
+
+# reverse()
+nums.reverse()
+print("reversed:", nums)
+
+# insert(index, value)
+nums.insert(1, 100)
+print("insert:", nums)
+
+# remove(value)
+nums.remove(100)
+print("remove:", nums)
+
+# pop(index)
+nums.pop(1)
+print("pop:", nums)
+
+
+# ==========================================================
+# 7. STRING VS LIST
+# ==========================================================
+
+# String (IMMUTABLE)
+name = "hello"
+# name[0] = "H"   # ❌ Error
+
+# List (MUTABLE)
+lst = ["h", "e", "l", "l", "o"]
+lst[0] = "H"
+print("List changed:", lst)
+
+
+# ==========================================================
+# 8. TUPLE DEFINITION
+# ==========================================================
+# Tuple is ordered collection but IMMUTABLE.
+
+tup = (1, 2, 3, 4)
+print("Tuple:", tup)
+
+
+# ==========================================================
+# 9. SINGLE ELEMENT TUPLE
+# ==========================================================
+# Comma is required
+
+single = (1,)
+print(type(single))
+
+
+# ==========================================================
+# 10. TUPLE INDEXING
+# ==========================================================
+
+tup = (10, 20, 30)
+
+print(tup[0])
+print(tup[1])
+
+
+# ==========================================================
+# 11. TUPLE SLICING
+# ==========================================================
+
+tup = (1, 2, 3, 4, 5)
+print(tup[1:4])
+
+
+# ==========================================================
+# 12. TUPLE METHODS (ONLY TWO)
+# ==========================================================
+
+tup = (1, 2, 2, 3, 2)
+
+# count()
+print("Count of 2:", tup.count(2))
+
+# index()
+print("Index of 3:", tup.index(3))
+
+
+# ==========================================================
+# 13. LIST VS TUPLE DIFFERENCE
+# ==========================================================
+
+# List  -> Mutable, uses []
+# Tuple -> Immutable, uses ()
+
+
+# ==========================================================
+# 14. PRACTICE QUESTION 1
+# Store 3 favorite movies
+# ==========================================================
+
+movies = []
+
+movies.append(input("Enter movie 1: "))
+movies.append(input("Enter movie 2: "))
+movies.append(input("Enter movie 3: "))
+
+print("Movies:", movies)
+
+
+# ==========================================================
+# 15. PRACTICE QUESTION 2
+# Check Palindrome List
+# ==========================================================
+
+list1 = [1, 2, 3, 2, 1]
+
+copy = list1.copy()
+copy.reverse()
+
+if copy == list1:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
