@@ -6,4 +6,5 @@ print(tup)   #so " , " is compulsory at the end of the tuple
 
 print(tup.index(2))   #index of the first occurance
 
-print(tup.count(2))   #counts of total occurance
+print(tup.count(2))    #counts of total occurance
+
